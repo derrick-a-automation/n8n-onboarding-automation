@@ -7,7 +7,7 @@ ServiceNow is currently mocked. The three create steps are isolated nodes with a
 ## How it works
 
 ```mermaid
-flowchart LR
+flowchart TD
     HR[HR system / Postman] -->|POST /newhire| E[Enrich payload<br/>onbId, type, form link]
     E --> N[Notify IT] --> C{FTE or<br/>Contractor?}
     C --> MF[Email manager<br/>FTE form link]
