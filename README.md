@@ -4,6 +4,20 @@ An HR-triggered employee onboarding workflow built in [n8n](https://n8n.io). A n
 
 ServiceNow is currently mocked. The three create steps are isolated nodes with a fixed output shape, so they can be swapped for real API calls without touching the rest of the flow (see [docs/roadmap.md](docs/roadmap.md)).
 
+**Intake:** HR trigger, manager notification and intake forms
+
+![n8n workflow: intake stage](docs/images/n8n-canvas-onboarding-intake.png)
+
+**Provisioning:** REQ, RITMs and SCTasks, team routing and the final summary
+
+![n8n workflow: provisioning stage](docs/images/n8n-canvas-onboarding-provisioning.png)
+
+| 1. Manager is emailed | 2. Manager completes the form |
+|---|---|
+| ![Manager notification email](docs/images/n8n-onboarding-manager-email.png) | ![Manager intake form](docs/images/n8n-onboarding-manager-form.png) |
+| **3. Manager gets instant confirmation** | **4. Each team gets only its own tasks** |
+| ![Submission received page](docs/images/n8n-onboarding-submission-received.png) | ![Hardware team email](docs/images/n8n-onboarding-hardware-team-email.png)<br>![Software team email](docs/images/n8n-onboarding-software-team-email.png) |
+
 ## How it works
 
 ```mermaid
