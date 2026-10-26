@@ -1,0 +1,24 @@
+# Raw n8n exports: run scripts/sanitize_export.py and commit the output in workflows/ instead
+*.raw.json
+exports/
+
+# Local n8n data, credentials and secrets
+.n8n/
+*.sqlite
+.env
+.env.*
+!.env.example
+
+# Postman environments can hold tokens; the collection itself is safe to commit
+*.postman_environment.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+__pycache__/
+node_modules/
+
+# Raw n8n exports belong in Downloads, never in the repo root
+/*.json

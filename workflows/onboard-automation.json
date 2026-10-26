@@ -1,0 +1,1072 @@
+{
+  "active": false,
+  "connections": {
+    "Ack Form Submission": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Gather Provision Info",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Cat Tasks": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Mock REQ Create",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Determine Hire Classification": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send Contractor Hire Notification to Mgr",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Send FTE New Hire Notification to Mgr",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Enrich Payload": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Send Initial Notice (e.g. IT, Slack, etc.)",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "FWD Contr ONB Form": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Map Contr Req Fields",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "FWD FTE ONB Form": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Map FTE Req Fields",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Fan Out Categories": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Mock RITM Create",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Fan Out Tasks": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Mock SCTask Create",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Full Provision Summary": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Group Tasks by Team",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Gather Provision Info": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Provisions Needed?",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Gen Dyn Tasks List": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Cat Tasks",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Group Tasks by Team": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Notify Provisioning Team",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "HR System Listener (Webhook)": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Enrich Payload",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Internal Master ONB Ticket": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Gen Dyn Tasks List",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Log - No Provision": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Notify Manager (No Tasks)",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Map Contr Req Fields": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Ack Form Submission",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Map FTE Req Fields": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Ack Form Submission",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Mock REQ Create": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Fan Out Categories",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Mock RITM Create": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Fan Out Tasks",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Mock SCTask Create": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Full Provision Summary",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "No Provision Summary": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Unified Onboarding Summary",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Notify HR - No Tasks": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "No Provision Summary",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Notify Manager (No Tasks)": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Notify HR - No Tasks",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Notify Provisioning Team": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Provisioned Result",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Present ONB Form - Contractor": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Render Contr ONB Form",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Present ONB Form - FTE": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Render FTE ONB Form",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Provisioned Result": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Unified Onboarding Summary",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Provisions Needed?": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Internal Master ONB Ticket",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Log - No Provision",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Render Contr ONB Form": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Respond to GET - Contr",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Render FTE ONB Form": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Respond to GET - FTE",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Restore Payload": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Determine Hire Classification",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Send Initial Notice (e.g. IT, Slack, etc.)": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Restore Payload",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "name": "Onboard-Automation-v3",
+  "nodeGroups": [],
+  "nodes": [
+    {
+      "id": "5bc3cde7-fbc0-465d-8164-7ff06e59cf3b",
+      "name": "Ack Form Submission",
+      "parameters": {
+        "options": {
+          "responseCode": 200,
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Content-Type",
+                "value": "text/html; charset=utf-8"
+              }
+            ]
+          }
+        },
+        "respondWith": "text",
+        "responseBody": "=<!DOCTYPE html><html><head><meta charset=\"utf-8\"><title>Submission received</title></head><body style=\"font-family:Arial,sans-serif;margin:40px;background:#f4f6f9;color:#333\"><div style=\"max-width:600px;margin:0 auto;background:white;padding:30px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1)\"><h2 style=\"margin-top:0\">Submission received</h2><p>Thank you. The onboarding profile for <strong>{{ $json.firstName }} {{ $json.lastName }}</strong> has been received, and the provisioning teams are being notified.</p><p style=\"font-size:13px;color:#666\">Reference: {{ $json.onbId }}</p></div></body></html>"
+      },
+      "position": [
+        480,
+        288
+      ],
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5
+    },
+    {
+      "id": "40b75568-9530-4b25-8c85-929d2ae59c1d",
+      "name": "Cat Tasks",
+      "parameters": {
+        "jsCode": "// Groups tasks by category and assigns the fulfilment team for each (the future RITM boundary).\nconst CATEGORY_TEAM = { Hardware: 'hardware', Software: 'software', Access: 'network', Special: 'facilities' };\n\nreturn $input.all().map(({ json: j }) => {\n  const byCat = {};\n  for (const t of j.tasks || []) {\n    if (!byCat[t.category]) byCat[t.category] = [];\n    byCat[t.category].push(t);\n  }\n  const categories = Object.entries(byCat).map(([category, tasks]) => ({\n    category,\n    team: CATEGORY_TEAM[category] || 'facilities',\n    tasks,\n  }));\n  return { json: { ...j, categories } };\n});\n"
+      },
+      "position": [
+        1424,
+        48
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "83094449-0842-4e70-b27e-aa521350f10d",
+      "name": "Determine Hire Classification",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "0a2d6bf7-e79a-4a35-b264-08646a39e07a",
+              "leftValue": "={{ $json.body.employmentType }}",
+              "operator": {
+                "name": "filter.operator.equals",
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "Contractor"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        -416,
+        288
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3
+    },
+    {
+      "id": "108230f6-c2aa-4b56-b6ae-ef36ad2eca2e",
+      "name": "Enrich Payload",
+      "parameters": {
+        "jsCode": "// Adds onbId, normalizes employmentType, and builds the manager's form link.\n// BASE_URL is the only place the host lives. Change it to a tunnel URL for remote demos.\nconst BASE_URL = 'http://localhost:5678';\n\nconst enc = (v) => encodeURIComponent(String(v ?? ''));\n\nreturn $input.all().map((item) => {\n  const input = item.json;\n  const body = input.body || {};\n\n  const iso = new Date().toISOString();                     // UTC, consistent date + time\n  const dateStamp = iso.slice(0, 10).replace(/-/g, '');     // YYYYMMDD\n  const timeStamp = iso.slice(11, 19).replace(/:/g, '');    // HHMMSS\n  const rand = Math.random().toString(36).slice(2, 8).toUpperCase().padEnd(6, '0');\n  const onbId = body.onbId || `ONB-${rand}-${dateStamp}-${timeStamp}`;\n\n  const isContractor = /^contract/i.test(String(body.employmentType || '').trim());\n  const employmentType = isContractor ? 'Contractor' : 'FTE';\n\n  const formPath = isContractor ? 'contr-onboarding-form' : 'fte-onboarding-form';\n  const qs = [\n    ['onbId', onbId],\n    ['fn', body.firstName],\n    ['ln', body.lastName],\n    ['sd', body.startDate],\n    ['me', body.managerEmail],\n    ['ee', body.employeeEmail],\n    ['et', employmentType],\n  ].map(([k, v]) => `${k}=${enc(v)}`).join('&');\n\n  return {\n    json: {\n      ...input,\n      body: { ...body, onbId, employmentType, formUrl: `${BASE_URL}/webhook/${formPath}?${qs}` },\n    },\n  };\n});\n"
+      },
+      "position": [
+        -880,
+        288
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "db64e475-432b-41ae-92b9-b709d3445af2",
+      "name": "FWD Contr ONB Form",
+      "parameters": {
+        "httpMethod": "POST",
+        "options": {},
+        "path": "contr-onboarding-submit",
+        "responseMode": "responseNode"
+      },
+      "position": [
+        0,
+        0
+      ],
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "webhookId": "b7e7d17d-6725-405f-ba69-adb9bf21d2a6"
+    },
+    {
+      "id": "4790f6cb-9efd-4243-80aa-23ec5a019582",
+      "name": "FWD FTE ONB Form",
+      "parameters": {
+        "httpMethod": "POST",
+        "options": {},
+        "path": "fte-onboarding-submit",
+        "responseMode": "responseNode"
+      },
+      "position": [
+        0,
+        576
+      ],
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "webhookId": "84a3c7dc-3d7a-4737-b842-2358f9bf7469"
+    },
+    {
+      "id": "774abf13-e3d2-49c5-be5e-812565dc250b",
+      "name": "Fan Out Categories",
+      "parameters": {
+        "jsCode": "// One item per category. n8n runs the next node once per item, so no loop node is needed.\nconst out = [];\nfor (const { json: j } of $input.all()) {\n  for (const c of j.categories || []) {\n    out.push({\n      json: {\n        onbId: j.onbId,\n        ticketId: j.ticketId,\n        employeeName: j.employeeName,\n        req: j.req,\n        category: c.category,\n        team: c.team,\n        tasks: c.tasks,\n      },\n    });\n  }\n}\nreturn out;\n"
+      },
+      "position": [
+        1840,
+        48
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "438f5db1-c21a-4091-bff0-825605e420e1",
+      "name": "Fan Out Tasks",
+      "parameters": {
+        "jsCode": "// One item per task, each carrying its parent RITM and REQ references.\nconst out = [];\nfor (const { json: j } of $input.all()) {\n  for (const t of j.tasks || []) {\n    out.push({\n      json: {\n        onbId: j.onbId,\n        req: j.req,\n        ritm: j.ritm,\n        category: j.category,\n        team: j.team,\n        taskType: t.taskType,\n        description: t.description,\n      },\n    });\n  }\n}\nreturn out;\n"
+      },
+      "position": [
+        2256,
+        48
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "a1b70dfe-d9e4-435c-94b3-f2112bfcbb0c",
+      "name": "Full Provision Summary",
+      "parameters": {
+        "jsCode": "// Collapses the REQ, RITM and SCTask results back into a single onboarding record.\nconst ticket = $('Internal Master ONB Ticket').first().json;\nconst req = $('Mock REQ Create').first().json.req;\n\nconst ritms = $('Mock RITM Create').all().map(({ json: r }) => ({\n  ...r.ritm,\n  category: r.category,\n  team: r.team,\n}));\n\nconst sctasks = $input.all().map(({ json: t }) => ({\n  ...t.sctask,\n  taskType: t.taskType,\n  description: t.description,\n  category: t.category,\n  team: t.team,\n  ritmNumber: t.ritm.ritmNumber,\n}));\n\nconst categories = ritms.map((r) => r.category);\n\nreturn [{\n  json: {\n    onbId: ticket.onbId,\n    ticketId: ticket.ticketId,\n    status: ticket.status,\n    employeeName: ticket.employeeName,\n    employeeEmail: ticket.employeeEmail,\n    managerEmail: ticket.managerEmail,\n    classification: ticket.classification,\n    startDate: ticket.startDate,\n    provisioningRequired: true,\n    tasksGenerated: sctasks.length,\n    categories,\n    req,\n    ritms,\n    sctasks,\n    summary: `Onboarding provisioning completed. ${sctasks.length} task(s) generated across ${categories.length} categor${categories.length === 1 ? 'y' : 'ies'} under ${req.reqNumber}.`,\n  },\n}];\n"
+      },
+      "position": [
+        2672,
+        48
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "0cec187d-7581-4655-ad1d-b81ba0f68924",
+      "name": "Gather Provision Info",
+      "parameters": {
+        "jsCode": "// Turns the free-text form answers into provisioning flags and carries the hire record forward.\nreturn $input.all().map(({ json: j }) => {\n  const hardware = (j.hardware || '').toLowerCase();\n  const software = (j.software || '').toLowerCase();\n  const network = (j.network || '').toLowerCase();\n  const instructions = (j.instructions || '').trim();\n\n  return {\n    json: {\n      needsLaptop: hardware.includes('laptop') || hardware.includes('notebook'),\n      needsMonitor: hardware.includes('monitor'),\n      needsDock: hardware.includes('dock'),\n      needsOffice: software.includes('office') || software.includes('365'),\n      needsSlack: software.includes('slack'),\n      needsAdobe: software.includes('adobe'),\n      needsVPN: network.includes('vpn'),\n      needsSharedDriveA: network.includes('shared drive a'),\n      needsAdminVLAN: network.includes('admin'),\n      hasSpecialInstructions: instructions.length > 0,\n      instructions,\n      hardware: j.hardware || '',\n      software: j.software || '',\n      network: j.network || '',\n      onbId: j.onbId || '',\n      firstName: j.firstName || '',\n      lastName: j.lastName || '',\n      startDate: j.startDate || '',\n      managerEmail: j.managerEmail || '',\n      employeeEmail: j.employeeEmail || '',\n      employmentType: j.employmentType || '',\n      submittedAt: j.submittedAt || '',\n    },\n  };\n});\n"
+      },
+      "position": [
+        672,
+        288
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "48e06c0a-8219-44aa-bcdd-f5aab876f40d",
+      "name": "Gen Dyn Tasks List",
+      "parameters": {
+        "jsCode": "// One catalog drives both detection and routing. Add a row here to add a new task type.\nconst TASK_CATALOG = [\n  { flag: 'needsLaptop',       taskType: 'Laptop',       category: 'Hardware', description: 'Provision laptop for new hire' },\n  { flag: 'needsMonitor',      taskType: 'Monitor',      category: 'Hardware', description: 'Provision monitor for new hire' },\n  { flag: 'needsDock',         taskType: 'Dock',         category: 'Hardware', description: 'Provision docking station for new hire' },\n  { flag: 'needsOffice',       taskType: 'Office',       category: 'Software', description: 'Assign Microsoft 365 license' },\n  { flag: 'needsSlack',        taskType: 'Slack',        category: 'Software', description: 'Add user to Slack workspace' },\n  { flag: 'needsAdobe',        taskType: 'Adobe',        category: 'Software', description: 'Assign Adobe Creative Cloud license' },\n  { flag: 'needsVPN',          taskType: 'VPN',          category: 'Access',   description: 'Enable VPN access' },\n  { flag: 'needsSharedDriveA', taskType: 'SharedDriveA', category: 'Access',   description: 'Grant access to Shared Drive A' },\n  { flag: 'needsAdminVLAN',    taskType: 'AdminVLAN',    category: 'Access',   description: 'Assign Admin VLAN network access' },\n];\n\nreturn $input.all().map(({ json: j }) => {\n  const tasks = TASK_CATALOG\n    .filter((t) => j[t.flag])\n    .map(({ taskType, category, description }) => ({ taskType, category, description }));\n\n  if (j.hasSpecialInstructions) {\n    tasks.push({ taskType: 'SpecialInstructions', category: 'Special', description: j.instructions || 'Review special instructions' });\n  }\n  if (j.hardware && !tasks.some((t) => t.category === 'Hardware') && !/byod|no hardware/i.test(j.hardware)) {\n    // Selected hardware that no catalog keyword matched: still route it, don't drop it silently.\n    tasks.push({ taskType: 'HardwareOther', category: 'Hardware', description: `Provision: ${j.hardware}` });\n  }\n  return { json: { ...j, tasks } };\n});\n"
+      },
+      "position": [
+        1264,
+        48
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "52202c7a-7c93-4514-b356-f82a7979a244",
+      "name": "Group Tasks by Team",
+      "parameters": {
+        "jsCode": "// One item per team that actually has work, so only those teams get an email.\n// POC routing uses Gmail plus-addressing so every notice lands in one test inbox.\nconst TEAM_EMAIL = {\n  hardware: 'automation.inbox+hardware@example.com',\n  software: 'automation.inbox+software@example.com',\n  network: 'automation.inbox+network@example.com',\n  facilities: 'automation.inbox+facilities@example.com',\n};\nconst esc = (v) => String(v ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');\n\nconst s = $input.first().json;\nconst byTeam = {};\nfor (const t of s.sctasks || []) {\n  if (!byTeam[t.team]) byTeam[t.team] = [];\n  byTeam[t.team].push(t);\n}\n\nreturn Object.entries(byTeam).map(([team, tasks]) => ({\n  json: {\n    team,\n    teamLabel: team.charAt(0).toUpperCase() + team.slice(1),\n    teamEmail: TEAM_EMAIL[team],\n    taskCount: tasks.length,\n    tasks,\n    taskListHtml: tasks\n      .map((t) => `<li><strong>${esc(t.taskNumber)}</strong> – ${esc(t.description)} <span style=\"color:#666\">(${esc(t.ritmNumber)})</span></li>`)\n      .join(''),\n    onbId: s.onbId,\n    employeeName: s.employeeName,\n    startDate: s.startDate,\n    managerEmail: s.managerEmail,\n    reqNumber: s.req.reqNumber,\n  },\n}));\n"
+      },
+      "position": [
+        2880,
+        48
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "cdcca52e-ef45-466c-87e6-ab240f0759f3",
+      "name": "HR System Listener (Webhook)",
+      "parameters": {
+        "httpMethod": "POST",
+        "options": {},
+        "path": "newhire"
+      },
+      "position": [
+        -1056,
+        288
+      ],
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "webhookId": "13215be3-819b-4c2c-86b5-541f0550eb96"
+    },
+    {
+      "id": "bd419044-2ed5-4e5a-80ac-422d445fd535",
+      "name": "Internal Master ONB Ticket",
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "1486479d-a6f1-4f4c-8e42-82cfcbb75612",
+              "name": "ticketId",
+              "type": "string",
+              "value": "=TKT-{{ Math.floor(Math.random() * 900000000000 + 100000000000).toString() }}"
+            },
+            {
+              "id": "99ce73b4-305a-4f6f-a11a-d408bc1c7043",
+              "name": "employeeName",
+              "type": "string",
+              "value": "={{ ($json.firstName + ' ' + $json.lastName).trim() }}"
+            },
+            {
+              "id": "3a349312-7d67-431b-80cc-d89a4d23cc80",
+              "name": "classification",
+              "type": "string",
+              "value": "={{ $json.employmentType }}"
+            },
+            {
+              "id": "ee71c4e2-e55d-4a57-acb4-ca9cdaf12f2f",
+              "name": "provisioningRequired",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "37421d1d-868f-4a7e-97b0-799fb8ae627e",
+              "name": "status",
+              "type": "string",
+              "value": "Open"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "position": [
+        1088,
+        48
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "a7e690ca-07f6-4b84-ab9e-b67714b3f407",
+      "name": "Log - No Provision",
+      "parameters": {
+        "jsCode": "return $input.all().map(({ json: j }) => ({\n  json: {\n    onbId: j.onbId,\n    employeeName: `${j.firstName || ''} ${j.lastName || ''}`.trim(),\n    employeeEmail: j.employeeEmail,\n    managerEmail: j.managerEmail,\n    classification: j.employmentType,\n    startDate: j.startDate,\n    provisioningRequired: false,\n    tasksGenerated: 0,\n    categories: [],\n    message: 'No provisioning tasks required for this hire.',\n  },\n}));\n"
+      },
+      "position": [
+        1088,
+        496
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "047b778c-8d76-4aa2-b0a3-ea16fbf7c746",
+      "name": "Map Contr Req Fields",
+      "parameters": {
+        "jsonOutput": "={{ {hardware: [$json.body.hardware, $json.body.monitor, $json.body.dock].filter(Boolean).join(', '), software: $json.body.software, network: $json.body.network, instructions: $json.body.instructions, onbId: $json.body.onbId, firstName: $json.body.fn, lastName: $json.body.ln, startDate: $json.body.sd, managerEmail: $json.body.me, employeeEmail: $json.body.ee, employmentType: $json.body.et, submittedAt: $now.toISO() } }}",
+        "mode": "raw",
+        "options": {}
+      },
+      "position": [
+        192,
+        0
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "fac42196-b7b3-4da4-a63c-561aa07f969f",
+      "name": "Map FTE Req Fields",
+      "parameters": {
+        "jsonOutput": "={{ {hardware: [$json.body.hardware, $json.body.monitor, $json.body.dock].filter(Boolean).join(', '), software: $json.body.software, network: $json.body.network, instructions: $json.body.instructions, onbId: $json.body.onbId, firstName: $json.body.fn, lastName: $json.body.ln, startDate: $json.body.sd, managerEmail: $json.body.me, employeeEmail: $json.body.ee, employmentType: $json.body.et, submittedAt: $now.toISO() } }}",
+        "mode": "raw",
+        "options": {}
+      },
+      "position": [
+        192,
+        576
+      ],
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "id": "a873d0e1-fc3c-429c-9412-7be4f3e94680",
+      "name": "Mock REQ Create",
+      "parameters": {
+        "jsCode": "// SWAP POINT (ServiceNow): replace with an HTTP Request to sc_request. One REQ per onboarding.\n// Downstream nodes read req.reqNumber and req.reqSysId, so map the API response into that shape.\nreturn $input.all().map(({ json: j }, i) => ({\n  json: {\n    ...j,\n    req: {\n      reqNumber: 'REQ' + Math.floor(Math.random() * 9000000 + 1000000),\n      reqSysId: `mock-req-${Date.now()}-${i}`,\n    },\n  },\n}));\n"
+      },
+      "position": [
+        1632,
+        48
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "8e5c5770-16fc-4c28-8dc1-fe8111724316",
+      "name": "Mock RITM Create",
+      "parameters": {
+        "jsCode": "// SWAP POINT (ServiceNow): replace with an HTTP Request to sc_req_item, parent = req.reqSysId.\n// Runs once per category item; output must keep the `ritm` object shape.\nreturn $input.all().map(({ json: j }, i) => ({\n  json: {\n    ...j,\n    ritm: {\n      ritmNumber: 'RITM' + Math.floor(Math.random() * 9000000 + 1000000),\n      ritmSysId: `mock-ritm-${Date.now()}-${i}`,\n    },\n  },\n}));\n"
+      },
+      "position": [
+        2048,
+        48
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "dc3f033d-bdd1-4c44-a8c3-4568ecc1340e",
+      "name": "Mock SCTask Create",
+      "parameters": {
+        "jsCode": "// SWAP POINT (ServiceNow): replace with an HTTP Request to sc_task, request_item = ritm.ritmSysId.\n// Runs once per task item; output must keep the `sctask` object shape.\nreturn $input.all().map(({ json: j }, i) => ({\n  json: {\n    ...j,\n    sctask: {\n      taskNumber: 'SCTASK' + Math.floor(Math.random() * 9000000 + 1000000),\n      taskSysId: `mock-task-${Date.now()}-${i}`,\n    },\n  },\n}));\n"
+      },
+      "position": [
+        2464,
+        48
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "75cfb368-1b5c-456c-9784-6c2b6cdc3463",
+      "name": "No Provision Summary",
+      "parameters": {
+        "jsCode": "// Gmail replaced the item with its send result. Rebuild from the log record.\nconst log = $('Log - No Provision').first().json;\nreturn [{\n  json: {\n    ...log,\n    req: null,\n    ritms: [],\n    sctasks: [],\n    summary: 'Onboarding completed successfully. No provisioning tasks were required for this hire.',\n  },\n}];\n"
+      },
+      "position": [
+        1712,
+        496
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "REPLACE_ON_IMPORT",
+          "name": "Gmail account"
+        }
+      },
+      "id": "e1bcc748-3024-4f9a-9f69-73d9bcedbd73",
+      "name": "Notify HR - No Tasks",
+      "parameters": {
+        "message": "=<p style=\"font-family: Arial, sans-serif; font-size: 14px;\">Hello,</p><p style=\"font-family: Arial, sans-serif; font-size: 14px;\">The onboarding request for <strong>{{ $('Log - No Provision').first().json.employeeName }}</strong> ({{ $('Log - No Provision').first().json.onbId }}) has been processed. No hardware, software, or access provisioning tasks were required. The onboarding workflow is complete.</p><p style=\"font-family: Arial, sans-serif; font-size: 14px;\">Thank you.</p>",
+        "options": {
+          "appendAttribution": false
+        },
+        "sendTo": "automation.inbox+hr@example.com",
+        "subject": "=Onboarding Complete – No Provisioning Required for {{ $('Log - No Provision').first().json.employeeName }}"
+      },
+      "position": [
+        1504,
+        496
+      ],
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "webhookId": "237610d0-109e-40df-96ff-d806c69bdedd"
+    },
+    {
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "REPLACE_ON_IMPORT",
+          "name": "Gmail account"
+        }
+      },
+      "id": "c46f85d7-7de0-46b9-9436-4c718a0b0663",
+      "name": "Notify Manager (No Tasks)",
+      "parameters": {
+        "message": "=<p style=\"font-family: Arial, sans-serif; font-size: 14px;\">Hello,</p><p style=\"font-family: Arial, sans-serif; font-size: 14px;\">Your onboarding request for <strong>{{ $json.employeeName }}</strong> ({{ $json.onbId }}) has been processed. Based on the details provided, no hardware, software, or access provisioning tasks were required. No further action is needed.</p><p style=\"font-family: Arial, sans-serif; font-size: 14px;\">Thank you.</p>",
+        "options": {
+          "appendAttribution": false
+        },
+        "sendTo": "={{ $json.managerEmail }}",
+        "subject": "=Onboarding Complete – No Provisioning Required for {{ $json.employeeName }}"
+      },
+      "position": [
+        1296,
+        496
+      ],
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "webhookId": "b63ea98f-9014-4d6a-8dbf-a67423dfc985"
+    },
+    {
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "REPLACE_ON_IMPORT",
+          "name": "Gmail account"
+        }
+      },
+      "id": "77272f82-2aba-4ca7-acdb-0e697e2cb786",
+      "name": "Notify Provisioning Team",
+      "parameters": {
+        "message": "=<p style=\"font-family: Arial, sans-serif; font-size: 14px;\">Hello {{ $json.teamLabel }} Team,</p><p style=\"font-family: Arial, sans-serif; font-size: 14px;\">Provisioning tasks have been generated for the onboarding of <strong>{{ $json.employeeName }}</strong>.</p><ul style=\"font-family: Arial, sans-serif; font-size: 14px;\"><li>Start date: {{ $json.startDate }}</li><li>Manager: {{ $json.managerEmail }}</li><li>Request: {{ $json.reqNumber }}</li><li>Onboarding ID: {{ $json.onbId }}</li></ul><p style=\"font-family: Arial, sans-serif; font-size: 14px;\"><strong>Your tasks ({{ $json.taskCount }}):</strong></p><ul style=\"font-family: Arial, sans-serif; font-size: 14px;\">{{ $json.taskListHtml }}</ul><p style=\"font-family: Arial, sans-serif; font-size: 14px;\">Please complete these before the start date. Thank you.</p>",
+        "options": {
+          "appendAttribution": false
+        },
+        "sendTo": "={{ $json.teamEmail }}",
+        "subject": "={{ $json.teamLabel }} Provisioning Required – {{ $json.employeeName }} (Start: {{ $json.startDate }})"
+      },
+      "position": [
+        3088,
+        48
+      ],
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "webhookId": "1b54ff36-5345-4d11-adf4-a2e7bd560537"
+    },
+    {
+      "id": "506818cf-2f47-452f-a5d8-6ce41caa0a67",
+      "name": "Present ONB Form - Contractor",
+      "parameters": {
+        "options": {},
+        "path": "contr-onboarding-form",
+        "responseMode": "responseNode"
+      },
+      "position": [
+        0,
+        192
+      ],
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "webhookId": "de8fd9a2-7712-4f44-a458-f05e898c1aaa"
+    },
+    {
+      "id": "5a8cb2a5-8905-4b9f-9ad0-67640935f84d",
+      "name": "Present ONB Form - FTE",
+      "parameters": {
+        "options": {},
+        "path": "fte-onboarding-form",
+        "responseMode": "responseNode"
+      },
+      "position": [
+        0,
+        384
+      ],
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "webhookId": "e5dca585-650a-415e-a6c4-d3264ab14633"
+    },
+    {
+      "id": "dd2165db-cfa2-4e9f-9218-b9b8ea7b409b",
+      "name": "Provisioned Result",
+      "parameters": {
+        "jsCode": "// Gmail replaced the items with send results (one per team). Restore the single summary record.\nreturn [{ json: $('Full Provision Summary').first().json }];\n"
+      },
+      "position": [
+        3296,
+        48
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "cf3cf810-4597-456c-933d-8c3710642fe7",
+      "name": "Provisions Needed?",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "8b617857-24f4-471c-ae9d-0183b412dd80",
+              "leftValue": "={{ $json.needsLaptop || $json.needsMonitor || $json.needsDock || $json.needsOffice || $json.needsSlack || $json.needsAdobe || $json.needsVPN || $json.needsSharedDriveA || $json.needsAdminVLAN || $json.hasSpecialInstructions }}",
+              "operator": {
+                "name": "filter.operator.true",
+                "operation": "true",
+                "singleValue": true,
+                "type": "boolean"
+              }
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        864,
+        288
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3
+    },
+    {
+      "id": "2ebf1b96-ddc8-4470-8901-1b15ee95685f",
+      "name": "Render Contr ONB Form",
+      "parameters": {
+        "jsCode": "// Renders the contractor onboarding form. Values arrive on the query string from the manager's email link,\n// and are carried through as hidden fields so the submit step has the full hire record.\nconst q = $input.first().json.query || {};\nconst esc = (v) => String(v ?? '')\n  .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')\n  .replace(/\"/g, '&quot;').replace(/'/g, '&#39;');\n\nconst TITLE = 'External Contractor Operational Intake';\nconst ACCENT = '#2b579a';\nconst ACCENT_HOVER = '#1b3a6b';\nconst SUBMIT_PATH = '/webhook/contr-onboarding-submit';  // relative: posts back to whatever host served this page\nconst BUTTON_LABEL = 'Submit Provisioning Profile';\nconst HARDWARE_OPTIONS = ['Standard Corporate Laptop', 'No Hardware - Bring Your Own Device (BYOD)'];\nconst ACCESSORIES = ['Monitor', 'Dock'];\nconst PLACEHOLDERS = {\n  software: 'e.g., Office 365, Slack, Adobe Creative Cloud',\n  network: 'e.g., Contractor VPN, Shared Drive P',\n  instructions: 'Specify vendor constraints or credential expiration dates...',\n};\n\nconst css = `body{font-family:Arial,sans-serif;margin:40px;background-color:#f4f6f9;color:#333}`\n  + `.form-container{max-width:600px;margin:0 auto;background:white;padding:30px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1)}`\n  + `h2{color:${ACCENT};margin-top:0}.meta{font-size:13px;color:#666;margin-top:-8px}`\n  + `label{display:block;margin-top:20px;font-weight:bold;font-size:14px}`\n  + `textarea,input,select{width:100%;padding:10px;margin-top:5px;border:1px solid #ccc;border-radius:4px;box-sizing:border-box;font-size:14px}`\n  + `textarea{height:80px;resize:vertical}`\n  + `.check{display:flex;align-items:center;gap:8px;font-weight:normal;margin-top:8px}`\n  + `.check input{width:auto;margin:0}`\n  + `button{margin-top:24px;padding:12px 24px;background-color:${ACCENT};color:white;border:none;border-radius:6px;font-size:16px;cursor:pointer;width:100%;font-weight:bold}`\n  + `button:hover{background-color:${ACCENT_HOVER}}`;\n\nconst page = (inner) => `<!DOCTYPE html><html><head><meta charset=\"utf-8\">`\n  + `<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>${TITLE}</title>`\n  + `<style>${css}</style></head><body><div class=\"form-container\">${inner}</div></body></html>`;\n\nif (!q.onbId) {\n  return [{ json: { html: page(`<h2>Link incomplete</h2><p>This form link is missing its onboarding ID. Please use the link from the onboarding email.</p>`) } }];\n}\n\nconst hidden = ['onbId', 'fn', 'ln', 'sd', 'me', 'ee', 'et']\n  .map((k) => `<input type=\"hidden\" name=\"${k}\" value=\"${esc(q[k])}\">`).join('');\nconst options = HARDWARE_OPTIONS.map((o) => `<option value=\"${esc(o)}\">${esc(o)}</option>`).join('');\nconst accessories = ACCESSORIES.map((a) =>\n  `<label class=\"check\"><input type=\"checkbox\" name=\"${a.toLowerCase()}\" value=\"${a}\">${a}</label>`\n).join('');\nconst fullName = `${q.fn || ''} ${q.ln || ''}`.trim() || 'New hire';\n\nconst html = page(\n  `<h2>${TITLE}</h2>`\n  + `<p class=\"meta\">${esc(fullName)} · Start ${esc(q.sd)} · ${esc(q.onbId)}</p>`\n  + `<form method=\"POST\" action=\"${SUBMIT_PATH}\">${hidden}`\n  + `<label>Hardware Requirements</label><select name=\"hardware\">${options}</select>`\n  + `<label>Accessories</label>${accessories}`\n  + `<label>Software Licenses Required</label><textarea name=\"software\" placeholder=\"${esc(PLACEHOLDERS.software)}\"></textarea>`\n  + `<label>Network Access Profiles</label><textarea name=\"network\" placeholder=\"${esc(PLACEHOLDERS.network)}\"></textarea>`\n  + `<label>Special Instructions</label><textarea name=\"instructions\" placeholder=\"${esc(PLACEHOLDERS.instructions)}\"></textarea>`\n  + `<button type=\"submit\">${BUTTON_LABEL}</button></form>`\n);\n\nreturn [{ json: { html } }];\n"
+      },
+      "position": [
+        192,
+        192
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "6b8722ed-b467-4c60-9fbf-d8822f3735d2",
+      "name": "Render FTE ONB Form",
+      "parameters": {
+        "jsCode": "// Renders the FTE onboarding form. Values arrive on the query string from the manager's email link,\n// and are carried through as hidden fields so the submit step has the full hire record.\nconst q = $input.first().json.query || {};\nconst esc = (v) => String(v ?? '')\n  .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')\n  .replace(/\"/g, '&quot;').replace(/'/g, '&#39;');\n\nconst TITLE = 'New Hire Onboarding Details (FTE)';\nconst ACCENT = '#0078d4';\nconst ACCENT_HOVER = '#005a9e';\nconst SUBMIT_PATH = '/webhook/fte-onboarding-submit';  // relative: posts back to whatever host served this page\nconst BUTTON_LABEL = 'Submit Onboarding Profile';\nconst HARDWARE_OPTIONS = ['Standard Engineering Laptop', 'Standard Corporate Laptop', 'Lightweight Travel Notebook'];\nconst ACCESSORIES = ['Monitor', 'Dock'];\nconst PLACEHOLDERS = {\n  software: 'e.g., Office 365, Slack, Adobe Creative Cloud',\n  network: 'e.g., VPN, Shared Drive A, Admin VLAN',\n  instructions: 'Any additional adjustments or shipping directions...',\n};\n\nconst css = `body{font-family:Arial,sans-serif;margin:40px;background-color:#f4f6f9;color:#333}`\n  + `.form-container{max-width:600px;margin:0 auto;background:white;padding:30px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1)}`\n  + `h2{color:${ACCENT};margin-top:0}.meta{font-size:13px;color:#666;margin-top:-8px}`\n  + `label{display:block;margin-top:20px;font-weight:bold;font-size:14px}`\n  + `textarea,input,select{width:100%;padding:10px;margin-top:5px;border:1px solid #ccc;border-radius:4px;box-sizing:border-box;font-size:14px}`\n  + `textarea{height:80px;resize:vertical}`\n  + `.check{display:flex;align-items:center;gap:8px;font-weight:normal;margin-top:8px}`\n  + `.check input{width:auto;margin:0}`\n  + `button{margin-top:24px;padding:12px 24px;background-color:${ACCENT};color:white;border:none;border-radius:6px;font-size:16px;cursor:pointer;width:100%;font-weight:bold}`\n  + `button:hover{background-color:${ACCENT_HOVER}}`;\n\nconst page = (inner) => `<!DOCTYPE html><html><head><meta charset=\"utf-8\">`\n  + `<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>${TITLE}</title>`\n  + `<style>${css}</style></head><body><div class=\"form-container\">${inner}</div></body></html>`;\n\nif (!q.onbId) {\n  return [{ json: { html: page(`<h2>Link incomplete</h2><p>This form link is missing its onboarding ID. Please use the link from the onboarding email.</p>`) } }];\n}\n\nconst hidden = ['onbId', 'fn', 'ln', 'sd', 'me', 'ee', 'et']\n  .map((k) => `<input type=\"hidden\" name=\"${k}\" value=\"${esc(q[k])}\">`).join('');\nconst options = HARDWARE_OPTIONS.map((o) => `<option value=\"${esc(o)}\">${esc(o)}</option>`).join('');\nconst accessories = ACCESSORIES.map((a) =>\n  `<label class=\"check\"><input type=\"checkbox\" name=\"${a.toLowerCase()}\" value=\"${a}\">${a}</label>`\n).join('');\nconst fullName = `${q.fn || ''} ${q.ln || ''}`.trim() || 'New hire';\n\nconst html = page(\n  `<h2>${TITLE}</h2>`\n  + `<p class=\"meta\">${esc(fullName)} · Start ${esc(q.sd)} · ${esc(q.onbId)}</p>`\n  + `<form method=\"POST\" action=\"${SUBMIT_PATH}\">${hidden}`\n  + `<label>Hardware Requirements</label><select name=\"hardware\">${options}</select>`\n  + `<label>Accessories</label>${accessories}`\n  + `<label>Software Licenses Required</label><textarea name=\"software\" placeholder=\"${esc(PLACEHOLDERS.software)}\"></textarea>`\n  + `<label>Network Access Profiles</label><textarea name=\"network\" placeholder=\"${esc(PLACEHOLDERS.network)}\"></textarea>`\n  + `<label>Special Instructions</label><textarea name=\"instructions\" placeholder=\"${esc(PLACEHOLDERS.instructions)}\"></textarea>`\n  + `<button type=\"submit\">${BUTTON_LABEL}</button></form>`\n);\n\nreturn [{ json: { html } }];"
+      },
+      "position": [
+        192,
+        384
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "90a5200a-1744-49f1-ba98-d4023c49e978",
+      "name": "Respond to GET - Contr",
+      "parameters": {
+        "options": {
+          "responseCode": 200,
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Content-Type",
+                "value": "text/html; charset=utf-8"
+              }
+            ]
+          }
+        },
+        "respondWith": "text",
+        "responseBody": "={{ $json.html }}"
+      },
+      "position": [
+        384,
+        192
+      ],
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5
+    },
+    {
+      "id": "ebe7ef3a-d872-4c41-8d51-ec16e993266f",
+      "name": "Respond to GET - FTE",
+      "parameters": {
+        "options": {
+          "responseCode": 200,
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Content-Type",
+                "value": "text/html; charset=utf-8"
+              }
+            ]
+          }
+        },
+        "respondWith": "text",
+        "responseBody": "={{ $json.html }}"
+      },
+      "position": [
+        384,
+        384
+      ],
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5
+    },
+    {
+      "id": "ff5f0587-6b62-4d28-9738-69720ea833be",
+      "name": "Restore Payload",
+      "parameters": {
+        "jsCode": "// Gmail replaces the item with its send result. Bring back the enriched payload.\nreturn $('Enrich Payload').all();\n"
+      },
+      "position": [
+        -560,
+        288
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "REPLACE_ON_IMPORT",
+          "name": "Gmail account"
+        }
+      },
+      "id": "633d4d03-5422-40b7-bead-0419dc3dc242",
+      "name": "Send Contractor Hire Notification to Mgr",
+      "parameters": {
+        "message": "=<h3 style=\"font-family: Arial, sans-serif; color: #2b579a; margin-bottom: 8px;\">External Contractor Operational Intake</h3><p style=\"font-family: Arial, sans-serif; font-size: 14px; color: #333;\">Operational routing has been initiated for external provider <strong>{{ $json.body.firstName }} {{ $json.body.lastName }}</strong> (start date {{ $json.body.startDate }}).</p><p style=\"font-family: Arial, sans-serif; font-size: 14px; color: #333;\">Please confirm vendor track constraints, asset allocation requests, and credential boundaries using the form below.</p><hr style=\"margin: 24px 0; border: none; border-top: 1px solid #ccc;\"><p style=\"text-align: center; margin: 24px 0;\"><a href=\"{{ $json.body.formUrl }}\" style=\"background-color: #2b579a; color: white; padding: 12px 20px; text-decoration: none; border-radius: 6px; font-family: Arial, sans-serif; font-size: 14px; display: inline-block;\">Complete Contractor Form</a></p><p style=\"font-family: Arial, sans-serif; font-size: 13px; color: #666;\">If the button does not work, copy this link into your browser:<br><span style=\"font-size: 12px; color: #555;\">{{ $json.body.formUrl }}</span></p>",
+        "options": {
+          "appendAttribution": false
+        },
+        "sendTo": "={{ $json.body.managerEmail }}",
+        "subject": "=ACTION REQUIRED: Secure Provisioning for Contractor {{ $json.body.firstName }} {{ $json.body.lastName }}"
+      },
+      "position": [
+        -192,
+        192
+      ],
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "webhookId": "6b0cf59c-0428-4370-96f0-edd5ee2b6b79"
+    },
+    {
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "REPLACE_ON_IMPORT",
+          "name": "Gmail account"
+        }
+      },
+      "id": "584c0b54-aa3b-48b9-a7f7-32f74a088e48",
+      "name": "Send FTE New Hire Notification to Mgr",
+      "parameters": {
+        "message": "=<h3 style=\"font-family: Arial, sans-serif; color: #333; margin-bottom: 8px;\">Full-Time Employee Logistics Dashboard</h3><p style=\"font-family: Arial, sans-serif; font-size: 14px; color: #333;\">Welcome <strong>{{ $json.body.firstName }} {{ $json.body.lastName }}</strong> to the organization! Start date: {{ $json.body.startDate }}.</p><p style=\"font-family: Arial, sans-serif; font-size: 14px; color: #333;\">Because this record is classified as a <strong>standard internal hire</strong>, the following internal systems are initializing:</p><ul style=\"font-family: Arial, sans-serif; font-size: 14px; color: #333; padding-left: 20px;\"><li>Corporate Directory Profile Ingestion</li><li>Standard Hardware Procurement Request</li><li>HR Portal Account Activation</li></ul><p style=\"font-family: Arial, sans-serif; font-size: 14px; color: #333;\">To complete onboarding, please review and submit the required information:</p><hr style=\"margin: 24px 0; border: none; border-top: 1px solid #ccc;\"><p style=\"text-align: center; margin: 24px 0;\"><a href=\"{{ $json.body.formUrl }}\" style=\"background-color: #0078d4; color: white; padding: 12px 20px; text-decoration: none; border-radius: 6px; font-family: Arial, sans-serif; font-size: 14px; display: inline-block;\">Complete Onboarding Form</a></p><p style=\"font-family: Arial, sans-serif; font-size: 13px; color: #666;\">If the button does not work, copy this link into your browser:<br><span style=\"font-size: 12px; color: #555;\">{{ $json.body.formUrl }}</span></p>",
+        "options": {
+          "appendAttribution": false
+        },
+        "sendTo": "={{ $json.body.managerEmail }}",
+        "subject": "=Onboarding Checklists: Welcome {{ $json.body.firstName }} {{ $json.body.lastName }}"
+      },
+      "position": [
+        -192,
+        384
+      ],
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "webhookId": "214e77a2-cadf-40b3-b367-9a8daa349cf7"
+    },
+    {
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "REPLACE_ON_IMPORT",
+          "name": "Gmail account"
+        }
+      },
+      "id": "4f922eaa-9082-4291-9d51-f88bdbac4f0e",
+      "name": "Send Initial Notice (e.g. IT, Slack, etc.)",
+      "parameters": {
+        "message": "=<p style=\"font-family: Arial, sans-serif;\">Onboarding has been triggered for <strong>{{ $json.body.firstName }} {{ $json.body.lastName }}</strong> ({{ $json.body.employmentType }}).</p><ul style=\"font-family: Arial, sans-serif;\"><li>Onboarding ID: {{ $json.body.onbId }}</li><li>Start date: {{ $json.body.startDate }}</li><li>Manager: {{ $json.body.managerEmail }}</li></ul>",
+        "options": {
+          "appendAttribution": false
+        },
+        "sendTo": "automation.inbox@example.com",
+        "subject": "=New Hire Process Triggered – {{ $json.body.firstName }} {{ $json.body.lastName }}"
+      },
+      "position": [
+        -720,
+        288
+      ],
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "webhookId": "ae269237-ee9e-4db1-936f-0641334082f4"
+    },
+    {
+      "id": "0e1d4159-91b8-4c37-9aa1-1d4637575852",
+      "name": "Unified Onboarding Summary",
+      "parameters": {
+        "jsCode": "// Final audit record. Both branches arrive here with the same flat shape.\nconst s = $input.first().json;\nreturn [{\n  json: {\n    onboardingId: s.onbId,\n    ticketId: s.ticketId || null,\n    employee: {\n      name: s.employeeName,\n      email: s.employeeEmail || null,\n      classification: s.classification,\n      startDate: s.startDate,\n    },\n    manager: { email: s.managerEmail },\n    provisioning: {\n      required: s.provisioningRequired,\n      tasksGenerated: s.tasksGenerated,\n      categories: s.categories || [],\n      req: s.req || null,\n      ritms: s.ritms || [],\n      sctasks: s.sctasks || [],\n    },\n    summaryMessage: s.summary,\n    timestamp: new Date().toISOString(),\n  },\n}];\n"
+      },
+      "position": [
+        3504,
+        288
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "availableInMCP": true,
+    "binaryMode": "separate",
+    "callerPolicy": "workflowsFromSameOwner",
+    "executionOrder": "v1",
+    "timeSavedMode": "fixed",
+    "timezone": "America/Los_Angeles"
+  },
+  "tags": []
+}

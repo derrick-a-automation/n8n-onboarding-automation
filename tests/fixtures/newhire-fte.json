@@ -1,0 +1,12 @@
+{
+  "firstName": "Mary-Kate",
+  "lastName": "O'Neil",
+  "employmentType": "FTE",
+  "startDate": "2026-11-03",
+  "managerEmail": "manager+test@example.com",
+  "employeeEmail": "mk.oneil@example.com",
+  "jobTitle": "Network Analyst",
+  "department": "IT Infrastructure",
+  "location": "Remote",
+  "requestedBy": "hr.user@example.com"
+}

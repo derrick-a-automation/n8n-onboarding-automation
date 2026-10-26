@@ -1,0 +1,14 @@
+{
+  "firstName": "Jean-Luc",
+  "lastName": "D'Arcy",
+  "employmentType": "contractor",
+  "startDate": "2026-11-10",
+  "managerEmail": "manager+test@example.com",
+  "employeeEmail": "jl.darcy@example.com",
+  "jobTitle": "Systems Integrator",
+  "department": "IT Infrastructure",
+  "location": "Onsite",
+  "vendor": "Acme Staffing",
+  "contractEndDate": "2027-03-31",
+  "requestedBy": "hr.user@example.com"
+}

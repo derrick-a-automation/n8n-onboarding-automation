@@ -1,0 +1,479 @@
+{
+  "info": {
+    "name": "n8n Onboarding Automation",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Test requests for the HR-triggered onboarding workflow. Set managerEmail to an inbox you can read (e.g. a +mgr plus-address) so the form-link email reaches you. webhookPrefix is 'webhook' for the active workflow, 'webhook-test' while listening in the editor."
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5678"
+    },
+    {
+      "key": "webhookPrefix",
+      "value": "webhook"
+    },
+    {
+      "key": "managerEmail",
+      "value": "your.inbox+mgr@gmail.com"
+    }
+  ],
+  "item": [
+    {
+      "name": "1. HR trigger (/newhire)",
+      "item": [
+        {
+          "name": "FTE new hire",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('n8n accepted the request', () => pm.response.to.have.status(200));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "description": "Happy path, FTE branch. No onbId: n8n generates one.",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"Mary-Kate\",\n  \"lastName\": \"O'Neil\",\n  \"employmentType\": \"FTE\",\n  \"startDate\": \"2026-11-03\",\n  \"managerEmail\": \"{{managerEmail}}\",\n  \"employeeEmail\": \"mk.oneil@example.com\",\n  \"jobTitle\": \"Network Analyst\",\n  \"department\": \"IT Infrastructure\",\n  \"location\": \"Remote\",\n  \"requestedBy\": \"hr.user@example.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/{{webhookPrefix}}/newhire",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "{{webhookPrefix}}",
+                "newhire"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Contractor new hire",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('n8n accepted the request', () => pm.response.to.have.status(200));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "description": "Happy path, Contractor branch, with the contractor-only fields.",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"Jean-Luc\",\n  \"lastName\": \"D'Arcy\",\n  \"employmentType\": \"Contractor\",\n  \"startDate\": \"2026-11-03\",\n  \"managerEmail\": \"{{managerEmail}}\",\n  \"employeeEmail\": \"jl.darcy@example.com\",\n  \"jobTitle\": \"Systems Integrator\",\n  \"department\": \"IT Infrastructure\",\n  \"location\": \"Onsite\",\n  \"requestedBy\": \"hr.user@example.com\",\n  \"vendor\": \"Acme Staffing\",\n  \"contractEndDate\": \"2027-03-31\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/{{webhookPrefix}}/newhire",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "{{webhookPrefix}}",
+                "newhire"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Lowercase employmentType",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('n8n accepted the request', () => pm.response.to.have.status(200));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "description": "Should still route to the Contractor branch (normalized in Enrich Payload).",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"Jean-Luc\",\n  \"lastName\": \"D'Arcy\",\n  \"employmentType\": \"contractor\",\n  \"startDate\": \"2026-11-03\",\n  \"managerEmail\": \"{{managerEmail}}\",\n  \"employeeEmail\": \"jl.darcy@example.com\",\n  \"jobTitle\": \"Systems Integrator\",\n  \"department\": \"IT Infrastructure\",\n  \"location\": \"Onsite\",\n  \"requestedBy\": \"hr.user@example.com\",\n  \"vendor\": \"Acme Staffing\",\n  \"contractEndDate\": \"2027-03-31\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/{{webhookPrefix}}/newhire",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "{{webhookPrefix}}",
+                "newhire"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Missing employmentType",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('n8n accepted the request', () => pm.response.to.have.status(200));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "description": "Currently defaults to FTE. Documents the behaviour until input validation is added.",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"Mary-Kate\",\n  \"lastName\": \"O'Neil\",\n  \"startDate\": \"2026-11-03\",\n  \"managerEmail\": \"{{managerEmail}}\",\n  \"employeeEmail\": \"mk.oneil@example.com\",\n  \"jobTitle\": \"Network Analyst\",\n  \"department\": \"IT Infrastructure\",\n  \"location\": \"Remote\",\n  \"requestedBy\": \"hr.user@example.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/{{webhookPrefix}}/newhire",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "{{webhookPrefix}}",
+                "newhire"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Missing managerEmail",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('n8n accepted the request', () => pm.response.to.have.status(200));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "description": "KNOWN GAP: currently fails at the Gmail node instead of being rejected up front.",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"Mary-Kate\",\n  \"lastName\": \"O'Neil\",\n  \"employmentType\": \"FTE\",\n  \"startDate\": \"2026-11-03\",\n  \"employeeEmail\": \"mk.oneil@example.com\",\n  \"jobTitle\": \"Network Analyst\",\n  \"department\": \"IT Infrastructure\",\n  \"location\": \"Remote\",\n  \"requestedBy\": \"hr.user@example.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/{{webhookPrefix}}/newhire",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "{{webhookPrefix}}",
+                "newhire"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Supplied onbId (pass-through)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('n8n accepted the request', () => pm.response.to.have.status(200));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "description": "Simulates the future intake app supplying the ID. The same onbId should appear in the final summary.",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"onbId\": \"ONB-PASSTH-20261022-120000\",\n  \"firstName\": \"Mary-Kate\",\n  \"lastName\": \"O'Neil\",\n  \"employmentType\": \"FTE\",\n  \"startDate\": \"2026-11-03\",\n  \"managerEmail\": \"{{managerEmail}}\",\n  \"employeeEmail\": \"mk.oneil@example.com\",\n  \"jobTitle\": \"Network Analyst\",\n  \"department\": \"IT Infrastructure\",\n  \"location\": \"Remote\",\n  \"requestedBy\": \"hr.user@example.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/{{webhookPrefix}}/newhire",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "{{webhookPrefix}}",
+                "newhire"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "2. Manager form submit (skips the email click)",
+      "item": [
+        {
+          "name": "FTE - full provisioning",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('n8n accepted the request', () => pm.response.to.have.status(200));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "description": "Exercises every task type: 10 SCTasks across 4 RITMs, one email per team.",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "onbId",
+                  "value": "ONB-TEST01-20261022-120000",
+                  "type": "text"
+                },
+                {
+                  "key": "fn",
+                  "value": "Mary-Kate",
+                  "type": "text"
+                },
+                {
+                  "key": "ln",
+                  "value": "O'Neil",
+                  "type": "text"
+                },
+                {
+                  "key": "sd",
+                  "value": "2026-11-03",
+                  "type": "text"
+                },
+                {
+                  "key": "me",
+                  "value": "{{managerEmail}}",
+                  "type": "text"
+                },
+                {
+                  "key": "ee",
+                  "value": "mk.oneil@example.com",
+                  "type": "text"
+                },
+                {
+                  "key": "et",
+                  "value": "FTE",
+                  "type": "text"
+                },
+                {
+                  "key": "hardware",
+                  "value": "Standard Engineering Laptop",
+                  "type": "text"
+                },
+                {
+                  "key": "monitor",
+                  "value": "Monitor",
+                  "type": "text"
+                },
+                {
+                  "key": "dock",
+                  "value": "Dock",
+                  "type": "text"
+                },
+                {
+                  "key": "software",
+                  "value": "Office 365, Slack, Adobe Creative Cloud",
+                  "type": "text"
+                },
+                {
+                  "key": "network",
+                  "value": "VPN, Shared Drive A, Admin VLAN",
+                  "type": "text"
+                },
+                {
+                  "key": "instructions",
+                  "value": "Ship to home address",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/{{webhookPrefix}}/fte-onboarding-submit",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "{{webhookPrefix}}",
+                "fte-onboarding-submit"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Contractor - BYOD, nothing requested",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('n8n accepted the request', () => pm.response.to.have.status(200));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "description": "No-provision path: manager and HR get the 'no provisioning required' emails.",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "onbId",
+                  "value": "ONB-TEST01-20261022-120000",
+                  "type": "text"
+                },
+                {
+                  "key": "fn",
+                  "value": "Mary-Kate",
+                  "type": "text"
+                },
+                {
+                  "key": "ln",
+                  "value": "O'Neil",
+                  "type": "text"
+                },
+                {
+                  "key": "sd",
+                  "value": "2026-11-03",
+                  "type": "text"
+                },
+                {
+                  "key": "me",
+                  "value": "{{managerEmail}}",
+                  "type": "text"
+                },
+                {
+                  "key": "ee",
+                  "value": "mk.oneil@example.com",
+                  "type": "text"
+                },
+                {
+                  "key": "et",
+                  "value": "Contractor",
+                  "type": "text"
+                },
+                {
+                  "key": "hardware",
+                  "value": "No Hardware - Bring Your Own Device (BYOD)",
+                  "type": "text"
+                },
+                {
+                  "key": "software",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "network",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "instructions",
+                  "value": "",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/{{webhookPrefix}}/contr-onboarding-submit",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "{{webhookPrefix}}",
+                "contr-onboarding-submit"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
